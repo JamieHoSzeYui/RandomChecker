@@ -1,0 +1,43 @@
+#https://static.cowtransfer.com/anonymous%2F5290594b-23aa-4fb6-974d-5b8378783c93%2Fnewdt.zip?t-s=1602225604247&t-c=dacbc762-2d25-4d7d-aa5d-f81c873394aa&attname=newdt.zip
+
+name: Extract DT
+
+on: [push]
+
+env:
+  TREE: https://static.cowtransfer.com/anonymous%2F5290594b-23aa-4fb6-974d-5b8378783c93%2Fnewdt.zip?t-s=1602225604247&t-c=dacbc762-2d25-4d7d-aa5d-f81c873394aa&attname=newdt.zip
+  CHECK: merlin
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Checkout
+         uses: actions/checkout@master
+
+       - name: Set up python
+         uses: actions/setup-python@v2
+         with:
+           python-version: '3.8.2'
+
+       - name: Initializing environment
+         run: |
+              cd /
+              sudo mkdir work
+              sudo apt install aria2
+              sudo chmod -R 0777 work
+              cd work
+              
+       - name: Download tree and run codename check
+         run: |
+              cd /work
+              sudo aria2c $TREE
+              mkdir 69
+              unzip * -d 69
+              cd 69
+              grep -R $CHECK * >> final.txt
+       
+       - name: Cat results
+         run: |
+             cd /work/69
+             cat final.txt
