@@ -33,7 +33,7 @@ jobs:
               cd /work
               sudo aria2c $TREE
               mkdir 69
-              unzip * -d 69
+              unzip *.zip -d 69
               cd 69
               grep -R $CHECK * >> final.txt
        
