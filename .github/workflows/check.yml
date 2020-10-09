@@ -5,7 +5,7 @@ name: Extract DT
 on: [push]
 
 env:
-  TREE: https://static.cowtransfer.com/anonymous%2F5290594b-23aa-4fb6-974d-5b8378783c93%2Fnewdt.zip?t-s=1602225604247&t-c=dacbc762-2d25-4d7d-aa5d-f81c873394aa&attname=newdt.zip
+  TREE: https://static.cowtransfer.com/anonymous%2F65262962-3a14-4794-bbcf-8b1c07cd7db5%2Fprodt.zip?t-s=1602227075515&t-c=45099c21-dbfd-4f60-bfbf-1dc99442ad67&attname=prodt.zip
   CHECK: merlin
 jobs:
   build:
