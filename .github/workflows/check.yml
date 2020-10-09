@@ -1,11 +1,9 @@
-#https://static.cowtransfer.com/anonymous%2F5290594b-23aa-4fb6-974d-5b8378783c93%2Fnewdt.zip?t-s=1602225604247&t-c=dacbc762-2d25-4d7d-aa5d-f81c873394aa&attname=newdt.zip
-
 name: Extract DT
 
 on: [push]
 
 env:
-  TREE: https://static.cowtransfer.com/anonymous%2F65262962-3a14-4794-bbcf-8b1c07cd7db5%2Fprodt.zip?t-s=1602227075515&t-c=45099c21-dbfd-4f60-bfbf-1dc99442ad67&attname=prodt.zip
+  TREE: https://static.cowtransfer.com/anonymous%2F09449dcd-def6-49de-b6a6-1c7c69506955%2Fnubdt.zip?t-s=1602227500183&t-c=5bc1eb53-35bd-4bad-af28-8e113b68638f&attname=nubdt.zip
   CHECK: merlin
 jobs:
   build:
